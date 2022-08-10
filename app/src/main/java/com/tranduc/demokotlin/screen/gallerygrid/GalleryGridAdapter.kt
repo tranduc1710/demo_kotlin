@@ -45,7 +45,7 @@ class GalleryGridAdapter(private val lGallery: MutableList<Gallery>) : RecyclerV
 
         holder.rvItemBottom.layoutManager = LinearLayoutManager(context)
         if (countItemRedundant > 0) {
-            val lItemLast = item.lImage.subList(item.lImage.size - countItemRedundant - 1, item.lImage.size - 1)
+            val lItemLast = item.lImage.subList(item.lImage.size - countItemRedundant, item.lImage.size)
             holder.rvItemBottom.adapter = ItemGalleryGridAdapter(lItemLast)
         }
     }
