@@ -1,0 +1,1 @@
+package com.tranduc.demokotlin.baseimport androidx.appcompat.app.AppCompatActivityopen class BaseView<T> : AppCompatActivity() {    inline fun <reified R : T> getPresenter(): R {        return R::class.java.newInstance()    }}
